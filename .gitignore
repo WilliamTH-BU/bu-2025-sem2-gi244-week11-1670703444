@@ -61,3 +61,10 @@ Assets/AssetStoreTools*
 *.log
 *.cache
 *.pidb.meta
+Assets/Course Library/_Source_Files/FBX/SkyDome.fbx
+Assets/Course Library/_Source_Files/FBX/SM_Tile_Hex_FloatingIsland_01.fbx
+Assets/Course Library/_Source_Files/Textures/PolygonMinis_Texture_01.png
+Assets/Course Library/_Source_Files/Textures/PolygonMinis_Texture_01_Purple.png
+Assets/Course Library/_Source_Files/Textures/PolygonPrototype_Texture_01.png
+Assets/Course Library/_Source_Files/Textures/SimpleIcons_Texture.png
+Assets/Course Library/_Source_Files/Textures/SimpleSky.png
