@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public Transform focalPoint;
     public bool hasPowerUp = false;
+    public GameObject ringPower;
  
     private Rigidbody rb;
  
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             //rb.linearVeclocity = new Vector3(0, 0, 0);
         }
+        RingShow();
     }
 
 
@@ -71,5 +73,13 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         hasPowerUp = false;
+    }
+    public void RingShow()
+    {
+        if (hasPowerUp == true)
+        {
+            ringPower.SetActive(true);
+        }
+        else { ringPower.SetActive(false); }
     }
 }
