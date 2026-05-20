@@ -14,7 +14,7 @@ public class PowerUpRingFollower : MonoBehaviour
 
     public void Follow()
     {
-        transform.position = new Vector3(playerLocate.position.x, playerLocate.position.y, playerLocate.position.z);
+        transform.position = new Vector3(playerLocate.position.x, transform.position.y, playerLocate.position.z);
     }
 
 }

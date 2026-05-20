@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject ringPower;
  
     private Rigidbody rb;
+    public Animator ringAnim;
  
     private InputAction moveAction;
     private InputAction smashAction;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        ringAnim = ringPower.GetComponent<Animator>();
         moveAction = InputSystem.actions.FindAction("Move");
         smashAction = InputSystem.actions.FindAction("Smash");
         breakAction = InputSystem.actions.FindAction("Break");
@@ -79,7 +81,12 @@ public class PlayerController : MonoBehaviour
         if (hasPowerUp == true)
         {
             ringPower.SetActive(true);
+            ringAnim.SetBool("RingSpin", true);
         }
-        else { ringPower.SetActive(false); }
+        else 
+        { 
+            ringPower.SetActive(false);
+            ringAnim.SetBool("RingSpin", false);
+        }
     }
 }
