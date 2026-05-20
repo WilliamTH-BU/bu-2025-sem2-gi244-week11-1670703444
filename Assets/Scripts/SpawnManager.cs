@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject enemyPrefab;
+    public PlayerController player;
 
     void Start()
     {

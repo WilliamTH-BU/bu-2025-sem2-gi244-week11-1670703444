@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             {
                 StopCoroutine(powerUpRoutine);
             }
-            StartCoroutine(PowerUpCooldown());
+            powerUpRoutine = StartCoroutine(PowerUpCooldown());
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
                 //var v = enemyRb.linearVelocity;
                 var dir = enemyRb.transform.position - transform.position;
                 dir.Normalize();
-                enemyRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+                enemyRb.AddForce(dir * 5, ForceMode.Impulse);
             }
         }
     }
